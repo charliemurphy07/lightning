@@ -68,6 +68,7 @@ projects[media_entity_twitter][type] = module
 projects[media_entity_twitter][download][type] = git
 projects[media_entity_twitter][download][url] = https://git.drupal.org/project/media_entity_twitter.git
 projects[media_entity_twitter][download][tag] = 8.x-1.1
+projects[media_entity_twitter][patch][] = https://www.drupal.org/files/issues/2764411_4.patch
 projects[metatag][type] = module
 projects[metatag][download][type] = git
 projects[metatag][download][url] = https://git.drupal.org/project/metatag

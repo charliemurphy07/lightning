@@ -28,6 +28,7 @@ widgets:
   18305601-1e5f-4d47-a42e-8fcdfb1227a7:
     settings:
       upload_location: 'public://'
+      multiple: false
     uuid: 18305601-1e5f-4d47-a42e-8fcdfb1227a7
     weight: 2
     label: Upload

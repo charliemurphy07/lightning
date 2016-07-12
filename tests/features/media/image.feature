@@ -49,8 +49,9 @@ Feature: Image media assets
     And I visit "/node/add/page"
     And I open the image browser for "My Image"
     And I click "Upload"
+    And I attach the file "puppy.jpg" to "edit-upload-upload"
+    And I wait for AJAX to finish
     Then I take a screenshot named "blargh"
-    # And I attach the file "chihuly.jpg" to "edit-upload-upload"
     # And I press "Select"
     # And I wait for AJAX to finish
     # Then an entity should be selected for "My Image"

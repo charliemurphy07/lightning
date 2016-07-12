@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fa41e2aa6e43a727e1689ab4c2126c6c",
-    "content-hash": "f5a4d9ee39d3378fc274ccbb7d7839ff",
+    "hash": "e5b63aed8372e1875990aaa5e5e04afc",
+    "content-hash": "242752c790d0640ca7fe35d15590694c",
     "packages": [
         {
             "name": "composer/installers",
@@ -1049,7 +1049,8 @@
                 },
                 "patches_applied": {
                     "2758767 - EB views that sort in descending order are broken by render caching": "https://www.drupal.org/files/issues/entity_browser-view-selection-render-cache-fix.patch",
-                    "2738843 - The view widget should support radio buttons": "https://www.drupal.org/files/issues/2738843-4.patch"
+                    "2738843 - The view widget should support radio buttons": "https://www.drupal.org/files/issues/2738843-4.patch",
+                    "2765031 - Make multiple option in Upload widget configurable": "https://www.drupal.org/files/issues/entity_browser-disable-multiple-file-uploads.patch"
                 }
             },
             "notification-url": "https://packagist.drupal-composer.org/downloads/",
@@ -4806,6 +4807,10 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "9.0.x-dev"
+                },
+                "patches_applied": {
+                    "Adding composer.json support to make-convert command": "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",
+                    "The batch table may not exist by the time _drush_backend_batch_process() is called in 8.x-1.x": "https://github.com/drush-ops/drush/commit/c389aebb7d3e26ff0f544684d8b3ec3528107e55.diff"
                 }
             },
             "autoload": {

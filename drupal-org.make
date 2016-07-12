@@ -28,6 +28,7 @@ projects[entity_browser][download][url] = https://git.drupal.org/project/entity_
 projects[entity_browser][download][tag] = 8.x-1.0-alpha5
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity_browser-view-selection-render-cache-fix.patch
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2738843-4.patch
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity_browser-disable-multiple-file-uploads.patch
 projects[entity_embed][type] = module
 projects[entity_embed][download][type] = git
 projects[entity_embed][download][url] = https://git.drupal.org/project/entity_embed.git

@@ -103,7 +103,11 @@ class MediaLibrarySubContext extends DrupalSubContextBase implements DrupalSubCo
     /** @var \CollapsibleSubContext $context */
     $context = $this->getContext('\CollapsibleSubContext');
 
-    $context->openCollapsible($context);
+    $context->openCollapsible($label);
+    $this->minkContext->pressButton('Select Image(s)');
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->getSession()->switchToIFrame('entity_browser_iframe_image-browser');
+    $this->awaitElement('form.entity-browser-form');
   }
 
 }

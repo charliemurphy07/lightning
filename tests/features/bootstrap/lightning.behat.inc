@@ -406,25 +406,4 @@ class LightningSubContext extends DrupalSubContextBase implements DrupalSubConte
     $this->assertSession()->fieldValueEquals($field, $value);
   }
 
-  /**
-   * @param $field_label
-   * @throws \Behat\Mink\Exception\ExpectationException
-   *
-   * @Then an entity should be selected for :field_label
-   */
-  public function assertEntityIsSelected($field_label) {
-    $details = $this->getSession()->getPage()->find('css', 'details');
-
-    /** @var \Behat\Mink\Element\ElementInterface $detail */
-    foreach ($details as $detail) {
-      $summary = $detail->find('css', 'summary');
-      if ($summary && $summary->getText() == $field_label) {
-        $is_empty = $detail->find('css', 'table.entities-list tbody tr td.empty.message');
-        if ($is_empty) {
-          throw new ExpectationException('Expected at least one entity to be selected for field "' . $field_label . '".', $this->getSession()->getDriver());
-        }
-      }
-    }
-  }
-
 }

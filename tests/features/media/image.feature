@@ -51,9 +51,7 @@ Feature: Image media assets
     And I click "Upload"
     And I attach the file "puppy.jpg" to "edit-upload-upload"
     And I wait for AJAX to finish
-    Then I take a screenshot named "blargh"
-    # And I press "Select"
-    # And I wait for AJAX to finish
-    # Then an entity should be selected for "My Image"
+    And I complete the image browser selection
+    Then an entity should be selected for "My Image"
     And I queue the latest media entity for deletion
     And I delete the "My Image" field from the page content type

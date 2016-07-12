@@ -5,6 +5,7 @@
  * Contains \MediaLibrarySubContext.
  */
 
+use Behat\Mink\Exception\ExpectationException;
 use Drupal\DrupalExtension\Context\DrupalSubContextBase;
 use Drupal\DrupalExtension\Context\DrupalSubContextInterface;
 
@@ -95,7 +96,10 @@ class MediaLibrarySubContext extends DrupalSubContextBase implements DrupalSubCo
   }
 
   /**
-   * @param $label
+   * Opens up an image browser.
+   *
+   * @param string $label
+   *   The label of the field containing the image browser.
    *
    * @When I open the image browser for :label
    */
@@ -108,6 +112,40 @@ class MediaLibrarySubContext extends DrupalSubContextBase implements DrupalSubCo
     $this->minkContext->iWaitForAjaxToFinish();
     $this->getSession()->switchToIFrame('entity_browser_iframe_image-browser');
     $this->awaitElement('form.entity-browser-form');
+  }
+
+  /**
+   * Completes the process of selecting an image in the image browser.
+   *
+   * @When I complete the image browser selection
+   */
+  public function completeImageBrowserSelection() {
+    $this->minkContext->pressButton('Select');
+    $this->getSession()->switchToWindow();
+    $this->minkContext->iWaitForAjaxToFinish();
+  }
+
+  /**
+   * Asserts that at least one entity is selected for an entity browser field.
+   *
+   * @param string $field_label
+   *   The label of the field that uses the entity browser.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
+   *   If no entities are selected.
+   *
+   * @Then an entity should be selected for :field_label
+   */
+  public function assertEntitySelected($field_label) {
+    /** @var \CollapsibleSubContext $context */
+    $context = $this->getContext('\CollapsibleSubContext');
+
+    $is_empty = $context->assertCollapsible($field_label)
+      ->find('css', 'table.entities-list tbody tr td.empty.message');
+
+    if ($is_empty) {
+      throw new ExpectationException('Expected at least one entity to be selected for field "' . $field_label . '".', $this->getSession()->getDriver());
+    }
   }
 
 }

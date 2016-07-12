@@ -11,6 +11,7 @@ php:
   - 5.5.37
 env:
   - VERSION=HEAD
+  - VERSION=8.x-1.01
   - VERSION=8.x-1.00
   - VERSION=8.x-1.00-rc7
   - VERSION=8.x-1.00-rc6

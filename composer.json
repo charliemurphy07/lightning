@@ -8,7 +8,7 @@
     "require-dev": {
         "drush/drush": "^9.0",
         "drupal/drupal-extension": "^3.2",
-        "jakoch/phantomjs-installer": "2.1.1",
+        "jakoch/phantomjs-installer": "1.9.8",
         "behat/behat": "^3.0",
         "drupal/coder": "8.*",
         "phing/phing": "^2.14",

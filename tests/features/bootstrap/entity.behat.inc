@@ -6,6 +6,7 @@
  */
 
 use Behat\Gherkin\Node\TableNode;
+use Behat\Mink\Exception\UnsupportedDriverActionException;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\DrupalExtension\Context\DrupalSubContextBase;
 use Drupal\DrupalExtension\Context\DrupalSubContextInterface;
@@ -259,6 +260,31 @@ class EntitySubContext extends DrupalSubContextBase implements DrupalSubContextI
       ->loadMultiple($entities);
 
     array_walk($entities, [$this, 'queueEntity']);
+  }
+
+  /**
+   * Creates a standard file entity by uploading a file.
+   *
+   * @param string $file
+   *   The file path relative to ../../files.
+   *
+   * @When I create a file entity from :file
+   */
+  public function createFileEntity($file) {
+    $this->visitPath('/file/add');
+    $this->minkContext->attachFileToField('files[upload]', $file);
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->minkContext->pressButton('Next');
+    $this->minkContext->pressButton('Save');
+
+    try {
+      $this->assertSession()->statusCodeEquals(200);
+    }
+    catch (UnsupportedDriverActionException $e) {
+      // OK, not a big deal...let's assume it worked.
+    }
+
+    $this->trackNewest('file');
   }
 
 }

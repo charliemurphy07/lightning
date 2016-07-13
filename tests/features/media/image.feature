@@ -42,7 +42,6 @@ Feature: Image media assets
     And the "File view mode" field should contain "thumbnail"
     And I delete the "Foo Image" field from the page content type
 
-  @testthis
   Scenario: Uploading an image into an image field using the image browser
     Given I am logged in as a user with the administrator role
     When I create a image field called "My Image" on the page content type
@@ -55,3 +54,12 @@ Feature: Image media assets
     Then an entity should be selected for "My Image"
     And I queue the latest media entity for deletion
     And I delete the "My Image" field from the page content type
+
+  Scenario: Selecting a pre-existing image from the image browser
+    Given I am logged in as a user with the administrator role
+    When I create a file entity from "puppy.jpg"
+    And I visit "/media/add/image"
+    And I enter "Dogs are the greatest" for "Media name"
+    And I open the image browser for "Image"
+    And I select item 1 in the browser
+    Then an entity should be selected for "Image"

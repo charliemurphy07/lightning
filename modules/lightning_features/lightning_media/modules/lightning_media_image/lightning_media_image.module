@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains functionality to support image media entities in Lightning.
+ */
+
 use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
 use Drupal\field\Entity\FieldConfig;
 
@@ -7,6 +12,8 @@ use Drupal\field\Entity\FieldConfig;
  * Implements hook_ENTITY_TYPE_presave().
  */
 function lightning_media_image_entity_form_display_presave(EntityFormDisplayInterface $display) {
+  // We only want to alter image fields being added to existing form displays,
+  // so bail out if this is a new display.
   if ($display->isNew()) {
     return;
   }

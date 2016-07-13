@@ -115,12 +115,33 @@ class MediaLibrarySubContext extends DrupalSubContextBase implements DrupalSubCo
   }
 
   /**
+   * Selects an item in the entity browser by its position.
+   *
+   * @param int $n
+   *   The item's one-based position in the grid view.
+   *
+   * @When I select item :n in the browser
+   */
+  public function selectBrowserItem($n) {
+    // Determine where in the grid the item will be and build the selector.
+    $row = floor($n / 4) + 1;
+    $column = ($n % $row) + 1;
+    $selector = ".view.eb-media .row-{$row} .col-{$column}[data-selectable]";
+
+    /** @var \LightningSubContext $context */
+    $context = $this->getContext('\LightningSubContext');
+    $context->clickElementBySelector($selector);
+
+    $this->completeBrowserSelection();
+  }
+
+  /**
    * Completes the process of selecting an image in the image browser.
    *
    * @When I complete the image browser selection
    */
-  public function completeImageBrowserSelection() {
-    $this->minkContext->pressButton('Select');
+  public function completeBrowserSelection($button = 'Select') {
+    $this->minkContext->pressButton($button);
     $this->getSession()->switchToWindow();
     $this->minkContext->iWaitForAjaxToFinish();
   }

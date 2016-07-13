@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Installation and update code for Lightning Media Image.
+ */
+
 use Drupal\Core\Entity\Entity\EntityViewDisplay;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\entity_browser\Entity\EntityBrowser;
@@ -12,6 +17,11 @@ use Drupal\views\Entity\View;
 function lightning_media_image_install() {
   // Set the default image style when displaying image files in thumbnail mode.
   lightning_media_image_update_8003();
+
+  // Grant media creators permission to use the image browser.
+  user_role_grant_permissions('media_creator', [
+    'access image_browser entity browser pages',
+  ]);
 }
 
 /**
@@ -26,7 +36,7 @@ function lightning_media_image_update_8001() {
  * Installs file_entity and creates the image browser and its view.
  */
 function lightning_media_image_update_8002() {
-  if (! \Drupal::moduleHandler()->moduleExists('file_entity')) {
+  if (!\Drupal::moduleHandler()->moduleExists('file_entity')) {
     \Drupal::service('module_installer')->install(['file_entity']);
   }
 
@@ -43,6 +53,7 @@ function lightning_media_image_update_8002() {
 function lightning_media_image_update_8003() {
   $image_style = ImageStyle::load('medium');
   if ($image_style) {
+    /** @var \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display */
     $display = EntityViewDisplay::load('file.image.thumbnail');
     $component = $display->getComponent('uri');
     $component['settings']['image_style'] = $image_style->id();

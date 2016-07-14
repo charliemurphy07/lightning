@@ -140,9 +140,17 @@ class MediaLibrarySubContext extends DrupalSubContextBase implements DrupalSubCo
    *
    * @When I complete the image browser selection
    */
-  public function completeBrowserSelection($button = 'Select') {
-    $this->minkContext->pressButton($button);
-    // $this->getSession()->switchToWindow();
+  public function completeBrowserSelection() {
+    $session = $this->getSession();
+
+    // If we submit the entity browser form normally from within the iframe
+    // context, PhantomJS 1.9.x will crash if we try to switch back to the
+    // window after the iframe is destroyed (which it will be as soon as we
+    // submit the entity browser). The only way to get around this is to switch
+    // to the window first, then use JS to reach into the iframe and click
+    // the button. It sucks, but it's all we got.
+    $session->switchToWindow();
+    $session->executeScript('document.querySelector("iframe[name=\"entity_browser_iframe_image-browser\"]").contentDocument.forms[0].elements.op.click()');
     $this->minkContext->iWaitForAjaxToFinish();
   }
 

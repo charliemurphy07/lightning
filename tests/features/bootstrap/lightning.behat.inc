@@ -37,6 +37,15 @@ class LightningSubContext extends DrupalSubContextBase implements DrupalSubConte
   }
 
   /**
+   * Forces a session reset after each scenario.
+   *
+   * @AfterScenario
+   */
+  public function resetSession() {
+    $this->getSession()->reset();
+  }
+
+  /**
    * Asserts that an element, specified by CSS selector, exists.
    *
    * @param string $selector

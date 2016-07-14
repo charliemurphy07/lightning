@@ -142,7 +142,7 @@ class MediaLibrarySubContext extends DrupalSubContextBase implements DrupalSubCo
    */
   public function completeBrowserSelection($button = 'Select') {
     $this->minkContext->pressButton($button);
-    $this->getSession()->switchToWindow();
+    // $this->getSession()->switchToWindow();
     $this->minkContext->iWaitForAjaxToFinish();
   }
 

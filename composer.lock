@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "68bddf1667cad7d11a67f3ce943dd672",
-    "content-hash": "cd607de332eeae95f7d2cc8767d64600",
+    "hash": "850b4b215c608f6204cf7708b00a1c9d",
+    "content-hash": "3dcc4c18735d384b8bdf6b306816b418",
     "packages": [
         {
             "name": "composer/installers",
@@ -4980,16 +4980,16 @@
         },
         {
             "name": "jakoch/phantomjs-installer",
-            "version": "1.9.7",
+            "version": "1.9.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jakoch/phantomjs-installer.git",
-                "reference": "2431d7001a911c672b2ef04f447222a967134313"
+                "reference": "fd6459094404f698a4edb9609e5e8c55c6418824"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jakoch/phantomjs-installer/zipball/2431d7001a911c672b2ef04f447222a967134313",
-                "reference": "2431d7001a911c672b2ef04f447222a967134313",
+                "url": "https://api.github.com/repos/jakoch/phantomjs-installer/zipball/fd6459094404f698a4edb9609e5e8c55c6418824",
+                "reference": "fd6459094404f698a4edb9609e5e8c55c6418824",
                 "shasum": ""
             },
             "require": {
@@ -5017,7 +5017,7 @@
                 "headless",
                 "phantomjs"
             ],
-            "time": "2014-07-29 09:42:52"
+            "time": "2014-12-05 17:57:27"
         },
         {
             "name": "jakub-onderka/php-console-color",

@@ -98,7 +98,9 @@
     <phingcall target="build" />
     <exec command="${drush} cache-rebuild" />
     <exec command="${drush} updatedb --yes" dir="${docroot}" passthru="true" />
-    <!-- TODO: Execute manual update steps as needed. -->
+
+    <!-- Begin executing manual update steps. -->
+    <exec command="./updates/1.02" dir="${profile}" passthru="true" />
   </target>
 
   <!-- Prepares Lightning for the drupal.org packaging system. -->

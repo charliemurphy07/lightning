@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "50aa0af83e03cb84eb4966f86b5478fb",
-    "content-hash": "8238db4a597f1fdbd741ce72489f9c3f",
+    "hash": "33d13e2668d6876085d3b0e27e1cad1f",
+    "content-hash": "63aca3a98c931d1b90aad015a740ed49",
     "packages": [
         {
             "name": "composer/installers",
@@ -4572,7 +4572,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/coder-8.x-2.8.zip",
-                "reference": null,
+                "reference": "6d717e1a5a5dd592ebbeaafad11746849fb52532",
                 "shasum": null
             },
             "require": {
@@ -4807,6 +4807,10 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "9.0.x-dev"
+                },
+                "patches_applied": {
+                    "Adding composer.json support to make-convert command": "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",
+                    "The batch table may not exist by the time _drush_backend_batch_process() is called in 8.x-1.x": "https://github.com/drush-ops/drush/commit/c389aebb7d3e26ff0f544684d8b3ec3528107e55.diff"
                 }
             },
             "autoload": {
@@ -4976,20 +4980,19 @@
         },
         {
             "name": "jakoch/phantomjs-installer",
-            "version": "2.1.1-p05",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jakoch/phantomjs-installer.git",
-                "reference": "1aa2a29da48fee62679f7f7a3d446b0e52df494a"
+                "reference": "42b85cc0680b56c6ebeb5ced842d547cfd7c616a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jakoch/phantomjs-installer/zipball/1aa2a29da48fee62679f7f7a3d446b0e52df494a",
-                "reference": "1aa2a29da48fee62679f7f7a3d446b0e52df494a",
+                "url": "https://api.github.com/repos/jakoch/phantomjs-installer/zipball/42b85cc0680b56c6ebeb5ced842d547cfd7c616a",
+                "reference": "42b85cc0680b56c6ebeb5ced842d547cfd7c616a",
                 "shasum": ""
             },
             "require": {
-                "ext-bz2": "*",
                 "ext-openssl": "*"
             },
             "type": "custom-installer",
@@ -5014,7 +5017,7 @@
                 "headless",
                 "phantomjs"
             ],
-            "time": "2016-07-11 09:07:23"
+            "time": "2015-03-08 12:51:25"
         },
         {
             "name": "jakub-onderka/php-console-color",

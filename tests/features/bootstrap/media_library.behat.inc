@@ -151,6 +151,10 @@ class MediaLibrarySubContext extends DrupalSubContextBase implements DrupalSubCo
     // the button. It sucks, but it's all we got.
     $session->switchToWindow();
     $session->executeScript('document.querySelector("iframe[name=\"entity_browser_iframe_image-browser\"]").contentDocument.forms[0].elements.op.click()');
+    // A bit of AJAX stuff is taking place in the frame, but since we're now
+    // in the window context, we can't use iWaitForAjaxToFinish(). So just sleep
+    // on it a bit.
+    sleep(3);
     $this->minkContext->iWaitForAjaxToFinish();
   }
 

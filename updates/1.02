@@ -6,9 +6,9 @@ echo "Executing Lightning 1.02 updates..."
 # The Image media type's form display should use the image browser. There is no
 # automatic upgrade path for this so that we don't break existing UIs.
 
-$DRUSH config-set --yes core.entity_form.display.media.image.default content.image.type file_entity_browser
-$DRUSH config-set --yes core.entity_form.display.media.image.default content.image.settings.entity_browser image_browser
-$DRUSH config-set --yes core.entity_form.display.media.image.default content.image.settings.field_widget_edit true --format=yaml
-$DRUSH config-set --yes core.entity_form.display.media.image.default content.image.settings.field_widget_remove true --format=yaml
-$DRUSH config-set --yes core.entity_form.display.media.image.default content.image.settings.view_mode thumbnail
-$DRUSH config-set --yes core.entity_form.display.media.image.default content.image.settings.open false --format=yaml
+$DRUSH config-set --yes core.entity_form_display.media.image.default content.image.type file_entity_browser
+$DRUSH config-set --yes core.entity_form_display.media.image.default content.image.settings.entity_browser image_browser
+$DRUSH config-set --yes core.entity_form_display.media.image.default content.image.settings.field_widget_edit true --format=yaml
+$DRUSH config-set --yes core.entity_form_display.media.image.default content.image.settings.field_widget_remove true --format=yaml
+$DRUSH config-set --yes core.entity_form_display.media.image.default content.image.settings.view_mode thumbnail
+$DRUSH config-set --yes core.entity_form_display.media.image.default content.image.settings.open false --format=yaml

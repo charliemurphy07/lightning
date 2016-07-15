@@ -4,7 +4,6 @@ type: module
 core: 8.x
 dependencies:
   - entity_browser
-  - file_entity
   - image
   - lightning_media
   - media_entity_image

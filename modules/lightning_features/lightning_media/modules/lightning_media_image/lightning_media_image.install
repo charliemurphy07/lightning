@@ -34,10 +34,6 @@ function lightning_media_image_update_8001() {
  * Installs file_entity and creates the image browser and its view.
  */
 function lightning_media_image_update_8002() {
-  if (!\Drupal::moduleHandler()->moduleExists('file_entity')) {
-    \Drupal::service('module_installer')->install(['file_entity']);
-  }
-
   $values = lightning_read_config('views.view.image_browser', 'lightning_media_image');
   View::create($values)->save();
 
@@ -77,6 +73,11 @@ function lightning_media_image_update_8004() {
  */
 function lightning_media_image_update_dependencies() {
   return [
+    // 8002 creates the image browser, which requires file_entity to be set up
+    // correctly (as in Lightning Media 8013).
+    8002 => [
+      'lightning_media' => 8013,
+    ],
     // 8004 grants access to the image browser, which is created by 8002.
     8004 => [
       'lightning_media_image' => 8002,

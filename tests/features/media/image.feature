@@ -49,8 +49,9 @@ Feature: Image media assets
     And I delete the "Foo Image" field from the page content type
 
   Scenario: Uploading an image into an image field using the image browser
-    Given I am logged in as a user with the page_creator role
-    When I create a image field called "My Image" on the page content type
+    Given I am logged in as a user with the administrator role
+    And I create a image field called "My Image" on the page content type
+    And I am logged in as a user with the page_creator role
     And I visit "/node/add/page"
     And I open the image browser for "My Image"
     And I click "Upload"
@@ -59,6 +60,7 @@ Feature: Image media assets
     And I complete the image browser selection
     Then an entity should be selected for "My Image"
     And I queue the latest media entity for deletion
+    And I am logged in as a user with the administrator role
     And I delete the "My Image" field from the page content type
 
   Scenario: Selecting a pre-existing image from the image browser

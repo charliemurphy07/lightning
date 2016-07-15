@@ -54,6 +54,17 @@ use. For example, if you are currently running Beta 1 and are trying to update
 to Beta 3, you will need to follow the instructions for updating from Beta 1 to
 Beta 2, then from Beta 2 to Beta 3, in that order.
 
+### 1.01 to 1.02
+After running `drush updatedb` or visiting `update.php`:
+* Go to *Structure > Media bundles* and choose **Manage form display** for the 
+  Image bundle.
+* For the **Image** field, select **Entity browser (file)** as the widget.
+* Click the gear icon to configure the widget.
+* Select "Image Browser" for **Entity browser** and "Thumbnail" for **File view
+  mode**.
+* Click **Update** to save the changes to the widget, then **Save** to update the
+  display.
+
 ### 1.00 to 1.01
 There are no manual update steps for this version.
 

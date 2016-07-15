@@ -49,10 +49,11 @@ Feature: Image media assets
     And I delete the "Foo Image" field from the page content type
 
   Scenario: Uploading an image into an image field using the image browser
-    Given I am logged in as a user with the administrator role
+    # The user must have the administrator role in order to create and
+    # delete the field.
+    Given I am logged in as a user with the page_creator,administrator roles
     And I create a image field called "My Image" on the page content type
-    And I am logged in as a user with the page_creator role
-    And I visit "/node/add/page"
+    When I visit "/node/add/page"
     And I open the image browser for "My Image"
     And I click "Upload"
     And I attach the file "puppy.jpg" to "files[upload]"
@@ -60,11 +61,12 @@ Feature: Image media assets
     And I complete the image browser selection
     Then an entity should be selected for "My Image"
     And I queue the latest media entity for deletion
-    And I am logged in as a user with the administrator role
     And I delete the "My Image" field from the page content type
 
   Scenario: Selecting a pre-existing image from the image browser
-    Given I am logged in as a user with the page_creator role
+    # The user must have the media_creator role in order to create the
+    # file entity.
+    Given I am logged in as a user with the page_creator,media_creator roles
     When I create a file entity from "puppy.jpg"
     And I visit "/media/add/image"
     And I enter "Dogs are the greatest" for "Media name"

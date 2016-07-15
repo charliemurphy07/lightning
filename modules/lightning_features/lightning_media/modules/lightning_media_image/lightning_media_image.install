@@ -18,10 +18,8 @@ function lightning_media_image_install() {
   // Set the default image style when displaying image files in thumbnail mode.
   lightning_media_image_update_8003();
 
-  // Grant media creators permission to use the image browser.
-  user_role_grant_permissions('media_creator', [
-    'access image_browser entity browser pages',
-  ]);
+  // Grant access to the image browser.
+  lightning_media_image_update_8004();
 }
 
 /**
@@ -59,4 +57,29 @@ function lightning_media_image_update_8003() {
     $component['settings']['image_style'] = $image_style->id();
     $display->setComponent('uri', $component)->save();
   }
+}
+
+/**
+ * Gives media and content creators permission to use the image browser.
+ */
+function lightning_media_image_update_8004() {
+  user_role_grant_permissions('media_creator', [
+    'access image_browser entity browser pages',
+  ]);
+
+  \Drupal::service('lightning.content_roles')->grantPermissions('creator', [
+    'access image_browser entity browser pages',
+  ]);
+}
+
+/**
+ * Implements hook_update_dependencies().
+ */
+function lightning_media_image_update_dependencies() {
+  return [
+    // 8004 grants access to the image browser, which is created by 8002.
+    8004 => [
+      'lightning_media_image' => 8002,
+    ],
+  ];
 }

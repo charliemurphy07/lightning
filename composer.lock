@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "850b4b215c608f6204cf7708b00a1c9d",
-    "content-hash": "3dcc4c18735d384b8bdf6b306816b418",
+    "hash": "bdf77e4124913faae2bf8db7dea0f77a",
+    "content-hash": "4508fb134d74e6b93394d2776642f4f9",
     "packages": [
         {
             "name": "composer/installers",
@@ -665,7 +665,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/acquia_connector-8.x-1.2.zip",
-                "reference": "d316a01f15466dc322cc81f0e2dce4cddbf0db4b",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -704,7 +704,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/config_update-8.x-1.1.zip",
-                "reference": "ac1526df5836a611f04bb421945beddb6306b7f2",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -734,16 +734,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.1.6",
+            "version": "8.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "a6555edbe58e0a6a1d107cbf8c6568dd5e4531a2"
+                "reference": "3870ff6a47e723e3dce857473329d2f143e88d93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/a6555edbe58e0a6a1d107cbf8c6568dd5e4531a2",
-                "reference": "a6555edbe58e0a6a1d107cbf8c6568dd5e4531a2",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/3870ff6a47e723e3dce857473329d2f143e88d93",
+                "reference": "3870ff6a47e723e3dce857473329d2f143e88d93",
                 "shasum": ""
             },
             "require": {
@@ -752,7 +752,7 @@
                 "doctrine/common": "2.5.*",
                 "easyrdf/easyrdf": "0.9.*",
                 "egulias/email-validator": "1.2.*",
-                "guzzlehttp/guzzle": "~6.1",
+                "guzzlehttp/guzzle": "~6.2",
                 "masterminds/html5": "~2.1",
                 "paragonie/random_compat": "~1.0",
                 "php": ">=5.5.9",
@@ -905,7 +905,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2016-07-11 13:07:34"
+            "time": "2016-07-18 15:01:43"
         },
         {
             "name": "drupal/ctools",
@@ -918,7 +918,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha26.zip",
-                "reference": "c14a5eee970c3d0aab02e88f6c6a4d18091439b8",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -961,7 +961,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/embed-8.x-1.0-rc3.zip",
-                "reference": "135281965da85d0cfa04f3c0c77ce7821dfab662",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -992,7 +992,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.0-alpha3.zip",
-                "reference": "70a105ae063c54bf59e67f9e41cb9121374acb7c",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1015,16 +1015,16 @@
         },
         {
             "name": "drupal/entity_browser",
-            "version": "8.1.0-alpha5",
+            "version": "8.1.0-alpha6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_browser.git",
-                "reference": "e3b4ed3640e29ab4165d252007a13dffece7381e"
+                "reference": "56342042745d7b73e052f0a7cdc7693ae02c295e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-1.0-alpha5.zip",
-                "reference": "e3b4ed3640e29ab4165d252007a13dffece7381e",
+                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-1.0-alpha6.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1048,8 +1048,7 @@
                     "dev-8.x-1.x": "8.1.x-dev"
                 },
                 "patches_applied": {
-                    "2758767 - EB views that sort in descending order are broken by render caching": "https://www.drupal.org/files/issues/entity_browser-view-selection-render-cache-fix.patch",
-                    "2738843 - The view widget should support radio buttons": "https://www.drupal.org/files/issues/2738843-4.patch",
+                    "2738843 - The view widget should support radio buttons": "https://www.drupal.org/files/issues/2738843-7.patch",
                     "2765031 - Make multiple option in Upload widget configurable": "https://www.drupal.org/files/issues/entity_browser-disable-multiple-file-uploads.patch"
                 }
             },
@@ -1076,7 +1075,7 @@
             ],
             "description": "Provide a generic entity browser/picker/selector.",
             "homepage": "http://drupal.org/project/entity_browser",
-            "time": "2016-07-01 08:21:20"
+            "time": "2016-07-12 15:57:47"
         },
         {
             "name": "drupal/entity_embed",
@@ -1089,7 +1088,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.0-alpha2.zip",
-                "reference": "c248cda0da575d6a9f5f979497852137a6d07811",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1123,7 +1122,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/features-8.x-3.0-beta6.zip",
-                "reference": "245b7175b971e4239e3ee5685ca7c92942bf8a6e",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1162,7 +1161,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/file_entity-8.x-2.0-beta1.zip",
-                "reference": "9f7799d73471a3fa9f764c3b1c6a275d99750fb9",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1197,7 +1196,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-alpha6.zip",
-                "reference": "27af4de9fd961fa6ae1369604d05fec8b06db867",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1228,7 +1227,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha22.zip",
-                "reference": "90be55a68dd33d3564c26fab77573b62f6cda77e",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1282,7 +1281,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/media_entity-8.x-1.2.zip",
-                "reference": "8bc03edd625dc1ce7f7f6b770ce02e51f14cbcd2",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1314,7 +1313,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/media_entity_document-8.x-1.0.zip",
-                "reference": "9421623c56bebcaf5810a04d7f6a7dd72d9e462d",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1346,7 +1345,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/media_entity_image-8.x-1.1.zip",
-                "reference": "889bd7d34fb6a6c1dc2bfaf20485491a2b38e0aa",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1378,7 +1377,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/media_entity_instagram-8.x-1.1.zip",
-                "reference": "fa28eb4d5227383fea0dc9b9824050e390de5ea1",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1411,7 +1410,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/media_entity_twitter-8.x-1.1.zip",
-                "reference": "ed5a40009d31deeaadb58df370c86af6de095d54",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1423,9 +1422,6 @@
             "extra": {
                 "branch-alias": {
                     "dev-8.x-1.x": "8.1.x-dev"
-                },
-                "patches_applied": {
-                    "2764411 - Tweets embedded in CKEditor do not load when selected from Entity Browser": "https://www.drupal.org/files/issues/2764411_4.patch"
                 }
             },
             "notification-url": "https://packagist.drupal-composer.org/downloads/",
@@ -1447,7 +1443,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.0-beta9.zip",
-                "reference": "1a62e1e051462cb2ddabf4db35a8fef5c69b9c5c",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1500,7 +1496,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/page_manager-8.x-1.0-alpha23.zip",
-                "reference": "fed1710d1b366bb3417b197270c6d73caeae4fa1",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1549,7 +1545,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/panelizer-8.x-3.0-alpha2.zip",
-                "reference": "75a432927539383b391e6905fb5614cbe85a4b84",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1589,7 +1585,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/panels-8.x-3.0-beta4.zip",
-                "reference": "a463015692bd82a9446982f9ab044894dfdecdea",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1635,7 +1631,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-alpha3.zip",
-                "reference": "c4952e15e2906ff2040bc01f5e8f37d23950269e",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1669,7 +1665,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/scheduled_updates-8.x-1.0-alpha5.zip",
-                "reference": "cdeceb8fd89a3644fb34a8a5bcc194ca7cbd84fe",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1708,7 +1704,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-alpha2.zip",
-                "reference": "918d0d5e8e8ee7f446d3e068cb6aa2d7c61ee625",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1739,7 +1735,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/video_embed_field-8.x-1.1.zip",
-                "reference": "531f0c56883307a85c76539e0bf14e4d8a727393",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1786,7 +1782,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-8.x-1.0.zip",
-                "reference": "e8029d9bc84174b175f7881073525486b6bfde61",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1821,7 +1817,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/workbench_moderation-8.x-1.1.zip",
-                "reference": "661c2108c84e961a00ae7174c91053858447a7d2",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1965,27 +1961,27 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.2.0",
+            "version": "6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "d094e337976dff9d8e2424e8485872194e768662"
+                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d094e337976dff9d8e2424e8485872194e768662",
-                "reference": "d094e337976dff9d8e2424e8485872194e768662",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/3f808fba627f2c5b69e2501217bf31af349c1427",
+                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/promises": "~1.0",
-                "guzzlehttp/psr7": "~1.1",
-                "php": ">=5.5.0"
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.3.1",
+                "php": ">=5.5"
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "~4.0",
-                "psr/log": "~1.0"
+                "phpunit/phpunit": "^4.0",
+                "psr/log": "^1.0"
             },
             "type": "library",
             "extra": {
@@ -2023,7 +2019,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-03-21 20:02:09"
+            "time": "2016-07-15 17:22:37"
         },
         {
             "name": "guzzlehttp/promises",
@@ -4572,7 +4568,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/coder-8.x-2.8.zip",
-                "reference": "6d717e1a5a5dd592ebbeaafad11746849fb52532",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4807,10 +4803,6 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "9.0.x-dev"
-                },
-                "patches_applied": {
-                    "Adding composer.json support to make-convert command": "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",
-                    "The batch table may not exist by the time _drush_backend_batch_process() is called in 8.x-1.x": "https://github.com/drush-ops/drush/commit/c389aebb7d3e26ff0f544684d8b3ec3528107e55.diff"
                 }
             },
             "autoload": {
@@ -5290,16 +5282,16 @@
         },
         {
             "name": "mikey179/vfsStream",
-            "version": "v1.6.3",
+            "version": "v1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikey179/vfsStream.git",
-                "reference": "c19925cd0390d3c436a0203ae859afa460d0474b"
+                "reference": "0247f57b2245e8ad2e689d7cee754b45fbabd592"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/c19925cd0390d3c436a0203ae859afa460d0474b",
-                "reference": "c19925cd0390d3c436a0203ae859afa460d0474b",
+                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/0247f57b2245e8ad2e689d7cee754b45fbabd592",
+                "reference": "0247f57b2245e8ad2e689d7cee754b45fbabd592",
                 "shasum": ""
             },
             "require": {
@@ -5332,7 +5324,7 @@
             ],
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
-            "time": "2016-04-09 09:42:01"
+            "time": "2016-07-18 14:02:57"
         },
         {
             "name": "nikic/php-parser",
@@ -6556,16 +6548,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.6.1",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "fb72ed32f8418db5e7770be1653e62e0d6f5dd3d"
+                "reference": "4edb770cb853def6e60c93abb088ad5ac2010c83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/fb72ed32f8418db5e7770be1653e62e0d6f5dd3d",
-                "reference": "fb72ed32f8418db5e7770be1653e62e0d6f5dd3d",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4edb770cb853def6e60c93abb088ad5ac2010c83",
+                "reference": "4edb770cb853def6e60c93abb088ad5ac2010c83",
                 "shasum": ""
             },
             "require": {
@@ -6630,7 +6622,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-05-30 22:24:32"
+            "time": "2016-07-13 23:29:13"
         },
         {
             "name": "symfony/browser-kit",
